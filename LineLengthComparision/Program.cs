@@ -19,10 +19,19 @@
                 Console.WriteLine("Enter the 1st co-ordinates y2");
                 y2 = Convert.ToInt32(Console.ReadLine());
                 length[i] = Math.Sqrt(Math.Pow((x2 - x1), 2) + Math.Pow((y2 - y1), 2));
-                //Console.WriteLine("Length of the line is " + length);
             }
-            bool result = length[1].Equals(length[0]);
-            Console.WriteLine("Both lines are equal " + result);
+            if (length[0].CompareTo(length[1]) > 0)
+            {
+                Console.WriteLine("Line 01 is greater than line 02");
+            }
+            else if (length[0].CompareTo(length[1]) < 0)
+            {
+                Console.WriteLine("Line 02 is greater than line 01");
+            }
+            else
+            {
+                Console.WriteLine("Both Lines Are Equal");
+            }
         }
     }
 }
